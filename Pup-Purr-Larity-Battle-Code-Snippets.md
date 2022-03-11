@@ -251,7 +251,7 @@ public class CatMovementScript : MonoBehaviour
         {
             m_catState = CatState.Fixing;
             m_machineTarget.StartFixing();
-            Debug.Log("LESS THAN 1.5");
+            Debug.Log("LESS THAN 2.5");
         }
     }
 
