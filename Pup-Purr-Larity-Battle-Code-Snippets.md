@@ -1,7 +1,5 @@
-# Pup-purr-larity Battle Code Snippet(s) 
-With the code snippet(s) presented here I will only show the ones necessary to perform the actions this to prevent overcomplicating.
-<br>
-<br>
+# Pup-purr-larity Battle Code Snippet(s)
+
 ## Code snippet(s) on the rotational movement of a paper-like character, inspiration from the paper mario series. This code was written inside of a Coroutine so that it would only be played when necessary.
 
 **CatMovementScript.cs**
