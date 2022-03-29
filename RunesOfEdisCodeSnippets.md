@@ -87,4 +87,72 @@ private IEnumerator ComboAnim()   // ComboAnim() is a code based animation that 
 
 #
 
-##
+## For the sound manager I only needed to know how big the list of playable songs was and also let a randomizer pick a song to play out of the list
+
+**SoundManager.cs**
+
+```cs
+[Header("Music Settings")]
+public SongDataSO[] songData;	// Songs that can be played
+public AudioClip currentSong;	// Current Song that is selected
+public AudioSource musicOutput;	// Output source for the music
+
+private void Start()
+{
+	StartCoroutine(UpdateSong());
+}
+
+private void Update()
+{
+	// Check if there is a song playing, if not choose a new song
+  	if (!musicOutput.isPlaying)
+  	{
+	  	StartCoroutine(UpdateSong());
+	}
+}
+
+// UpdateSong() is used by the game to change a song to something from a set Array
+public IEnumerator UpdateSong()
+{
+	if (songData != null) // Get a new song from the List this mustn't be a song that is currently played and update the whole songNameText
+  	{
+	  	Debug.Log("Song has been updated");
+    		int randomValue = Random.Range(0, songData.Length);
+
+    		while (songData[randomValue].song == currentSong) // As long as the current picked song is the same as the only that just ended, pick a new one
+    		{
+	    		// If the randomValue is the same as the last songs position, the function will be restarted
+      			randomValue = Random.Range(0, songData.Length);
+    		}
+
+    		currentSong = songData[randomValue].song;
+    		HUDManager.instance.UpdateSongHUD();	// Update the HUD element that shows what song is currently being played
+
+    		if (!musicOutput.isPlaying)
+    		{
+	    		musicOutput.clip = currentSong;
+      			musicOutput.PlayOneShot(currentSong);
+    		}
+  	}
+
+	yield return null;
+ }
+```
+
+**HudManager.cs**
+```cs
+[Header("Song Settings")]
+public TextMeshProUGUI currentSongText;
+public Animator songTextAnim;
+
+	// UpdateSongHUD() will recieve a song from the SoundManager which tells it to show the Player what kind of song is currently being played
+	public void UpdateSongHUD()
+	{
+		songTextAnim.SetTrigger("GoTransition");
+		currentSongText.text = string.Format("{0}", SoundManager.instance.currentSong.name);
+	}
+```
+
+**Result: **
+
+#
