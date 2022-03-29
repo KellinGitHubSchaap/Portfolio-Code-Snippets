@@ -153,6 +153,6 @@ public Animator songTextAnim;
 	}
 ```
 
-**Result: **
+**Result:**
 
 #
