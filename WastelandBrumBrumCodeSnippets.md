@@ -41,19 +41,19 @@
     public LayerMask m_groundLayer;                 // What layer is considered ground
     public bool m_isGrounded;                       // Is the car grounded
 
-		private void Start()
+    private void Start()
     {
         m_sphereBody.transform.parent = null;       // Disconnect the Sphere Collider from the Car 
     }
 
 		private void Update()
     {
-				GetForwardInput(Input.GetAxis("Vertical"));                             // Forward speed of the car uses the Input.GetAxis(Vertical)
+	GetForwardInput(Input.GetAxis("Vertical"));                             // Forward speed of the car uses the Input.GetAxis(Vertical)
         m_accel = m_speedInput < 0 ? m_accelBoost : m_maxForwardAccel;          // Change accel based on the current SpeedInput of the car 
 
         GetSidewaysInput(Input.GetAxis("Horizontal"));                          // Horizontal speed (AKA turning) uses the Input.GetAxis(Horizontal)
 
-				// When the car is grounded it is allowed to turn and rotate
+	// When the car is grounded it is allowed to turn and rotate
         if (IsCarGrounded())
         {
             m_rotationInput = Input.GetAxis("Horizontal");
@@ -69,7 +69,7 @@
 				}
 
 
-				// Move the position of the Player to the body of the Sphere it is supposed to follow.
+	// Move the position of the Player to the body of the Sphere it is supposed to follow.
         transform.position = new Vector3(m_sphereBody.transform.position.x, m_sphereBody.transform.position.y + m_offsetToCenterSphere, m_sphereBody.transform.position.z);
 		}
 		
@@ -165,7 +165,32 @@
 }
 ```
 **Result:**
+
 ![ezgif-2-06511263e5](https://user-images.githubusercontent.com/78432932/161429042-4fa56a14-9dc5-40f3-8010-2b7887339bc2.gif)
 #
 
- 
+## The car also received a way to show banking when the player wanted to go left and right, this had also affect on the wheel facing direction
+
+**CarControllerScript.cs**
+
+```cs
+// If the car is drifting turn the frontwheels
+            if (!m_isDrifting)
+            {
+                m_frontWheelLeft.localEulerAngles = new Vector3(0, (Input.GetAxis("Horizontal") * m_minWheelRotation + 180), 0);
+                m_frontWheelRight.localEulerAngles = new Vector3(0, (Input.GetAxis("Horizontal") * m_minWheelRotation) + 180, 0);
+
+                m_carBodyModel.localEulerAngles = new Vector3(0, m_carBodyModel.localEulerAngles.y, Input.GetAxis("Horizontal") * m_minBanking);
+            }
+            else
+            {
+                m_frontWheelLeft.localEulerAngles = new Vector3(0, (Input.GetAxis("Horizontal") * m_maxWheelRotation) + 180, 0);
+                m_frontWheelRight.localEulerAngles = new Vector3(0, (Input.GetAxis("Horizontal") * m_maxWheelRotation) + 180, 0);
+
+                m_carBodyModel.localEulerAngles = new Vector3(0, m_carBodyModel.localEulerAngles.y, Input.GetAxis("Horizontal") * m_maxBanking);
+            }
+```
+**Result:**
+
+![ezgif-5-2295d3606c](https://user-images.githubusercontent.com/78432932/161429431-bcec42d5-37c0-4344-a85e-50df366afe83.gif)
+#
