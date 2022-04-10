@@ -62,7 +62,7 @@ func SetCameraTransition(var newPos, var transitionSpeed, var newPlayerPos):
 
 **Result:**
 
-Gif or Image
+![ezgif-2-e021d5f9a1](https://user-images.githubusercontent.com/78432932/162635038-24f67cf0-b501-4f78-8645-b427d734a397.gif)
 
 #
 
