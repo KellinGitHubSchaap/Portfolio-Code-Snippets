@@ -85,6 +85,8 @@ private IEnumerator ComboAnim()   // ComboAnim() is a code based animation that 
 
 **Result:**
 
+![ezgif-2-cf95d5392e](https://user-images.githubusercontent.com/78432932/162633026-c6bbad91-17dc-4e0a-889d-42ba4dac89a6.gif)
+
 #
 
 ## For the sound manager I only needed to know how big the list of playable songs was and also let a randomizer pick a song to play out of the list
