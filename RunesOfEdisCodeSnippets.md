@@ -156,7 +156,7 @@ public Animator songTextAnim;
 ```
 
 **Result:**
-![ezgif-2-f76f30f6b9](https://user-images.githubusercontent.com/78432932/162633647-4b6d6ddf-2734-4b96-828f-126bbafd4848.gif)
 
+![ezgif-2-f76f30f6b9](https://user-images.githubusercontent.com/78432932/162633647-4b6d6ddf-2734-4b96-828f-126bbafd4848.gif)
 
 #
