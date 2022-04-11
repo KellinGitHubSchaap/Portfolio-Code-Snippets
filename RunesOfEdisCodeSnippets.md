@@ -1,6 +1,6 @@
 # Runes Of Edis Code Snippets
 
-## Code for the "combo streak increase" animation. When this effect is activated it will show the player the current collected points and the combo streak, this effect continues as long as the player is chaining combos.
+Code for the "combo streak increase" animation. When this effect is activated it will show the player the current collected points and the combo streak, this effect continues as long as the player is chaining combos.
 
 **HudManager.cs**
 ```cs
@@ -89,7 +89,7 @@ private IEnumerator ComboAnim()   // ComboAnim() is a code based animation that 
 
 #
 
-## For the sound manager I only needed to know how big the list of playable songs was and also let a randomizer pick a song to play out of the list
+For the sound manager I only needed to know how big the list of playable songs was and also let a randomizer pick a song to play out of the list
 
 **SoundManager.cs**
 

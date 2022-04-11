@@ -1,6 +1,6 @@
 # Wasteland Brum Brum Code Snippet(s)
 
-## I learned via a tutorial about this topic that you can make an object behave like a car if you apply a Sphere Collider and let this interact with the world. For the rotating on steep inclines, the car uses a single raycast to detect how steep the object is and changes the pitch of the car based on that value.
+I learned via a tutorial about this topic that you can make an object behave like a car if you apply a Sphere Collider and let this interact with the world. For the rotating on steep inclines, the car uses a single raycast to detect how steep the object is and changes the pitch of the car based on that value.
 
  **CarControllerScript.cs**
  
@@ -169,7 +169,7 @@
 ![ezgif-2-06511263e5](https://user-images.githubusercontent.com/78432932/161429042-4fa56a14-9dc5-40f3-8010-2b7887339bc2.gif)
 #
 
-## The car also received a way to show banking when the player wanted to go left and right, this had also affect on the wheel facing direction
+The car also received a way to show banking when the player wanted to go left and right, this had also affect on the wheel facing direction
 
 **CarControllerScript.cs**
 
