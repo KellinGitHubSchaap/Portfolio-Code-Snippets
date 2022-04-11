@@ -1,6 +1,6 @@
 # Pup-purr-larity Battle Code Snippet(s)
 
-## For the rotational movement of a paper-like character this code had to be written inside of a Coroutine so that it would only be played when necessary.
+## For the rotating movement of a paper-like character, this code had to be written inside of a Coroutine so that it would only be played when necessary.
 
 **CatMovementScript.cs**
 
