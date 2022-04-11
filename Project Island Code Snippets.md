@@ -66,7 +66,7 @@ func SetCameraTransition(var newPos, var transitionSpeed, var newPlayerPos):
 
 #
 
-## Since this is an adventure game, I added in a dialogue system that gets activated when the player wants to talk with an NPC 
+Since this is an adventure game, I added in a dialogue system that gets activated when the player wants to talk with an NPC 
 
 **PlayerInteractionScript.gd**
 
