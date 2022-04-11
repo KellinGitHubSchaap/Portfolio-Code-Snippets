@@ -1,6 +1,6 @@
 # Runes Of Edis Code Snippets
 
-## Code snippet(s) on the combo streak increase animation. When this effect is activated it will stimulate the player into continuing chaining combos, thereby getting a higher score outcome once the player stops making them.
+## Code for the "combo streak increase" animation. When this effect is activated it will show the player the current collected points and the combo streak, this effect continues as long as the player is chaining combos.
 
 **HudManager.cs**
 ```cs
