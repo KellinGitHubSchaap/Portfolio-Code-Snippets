@@ -42,7 +42,7 @@ public class CatMovementScript : Monobehaviour
 ![ezgif-1-d049e6a1e6](https://user-images.githubusercontent.com/78432932/157834693-00760167-04a4-4b90-b303-9230b005c450.gif)
 #
 
-## One of the mechanics of the game was fixing broken machines, here are code snippets on how a broken machine is found by the Cat when the player clicks on it and also how it becomes fixed again.
+One of the mechanics of the game was fixing broken machines, here are code snippets on how a broken machine is found by the Cat when the player clicks on it and also how it becomes fixed again.
 
 **WorldScript.cs**
 
