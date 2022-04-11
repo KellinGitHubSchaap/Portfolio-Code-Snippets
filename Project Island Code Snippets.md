@@ -197,4 +197,6 @@ func SetDialoguePath(var pitch, var diaPath = ""):
 
 **Result:**
 
+![ezgif-3-5ff4025792](https://user-images.githubusercontent.com/78432932/162701714-4da38ac6-215f-428a-91c0-1f5e90fd821a.gif)
+
 #
