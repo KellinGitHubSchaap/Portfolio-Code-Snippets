@@ -1,6 +1,8 @@
 # Project Island Code Snippet(s)
 
-Code snippet(s) on the camera transitions like the 2D Legend of Zelda games. The code is currently connected to a collider that get triggered when the player moves out of it. When this trigger occurs the position of the player is captured and from there it determines in what direction the camera needs to move.
+
+## Camera transitioning
+The camera transitions are like the 2D Legend of Zelda games. The code is currently connected to a collider that get triggered when the player moves out of it. When this trigger occurs the position of the player is captured and from there it determines in what direction the camera needs to move.
 
 
 **CameraMovementScript.gd**
@@ -66,6 +68,7 @@ func SetCameraTransition(var newPos, var transitionSpeed, var newPlayerPos):
 
 #
 
+## NPC interaction
 Since this is an adventure game, I added in a dialogue system that gets activated when the player wants to talk with an NPC 
 
 **PlayerInteractionScript.gd**
